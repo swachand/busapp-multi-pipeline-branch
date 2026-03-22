@@ -3,8 +3,8 @@
 version=staging
 env="staging"
 
-if sudo docker ps -a --format '{{.Names}}' | grep "${env}"
+if docker ps -a --format '{{.Names}}' | grep "${env}"
 then
-sudo docker stop ${env} && sudo docker rm ${env}
+docker stop ${env} &&  docker rm ${env}
 fi
-sudo docker run -it -d -p 8000:8001 --name ${env} learnitguide/busapp:${version}
+docker run -it -d -p 6000:8001 --name ${env} swach/busapp:${version}
