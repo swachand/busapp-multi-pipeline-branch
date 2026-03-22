@@ -2,5 +2,5 @@
 
 version=production
 
-docker build -t learnitguide/busapp:${version} .
-docker push learnitguide/busapp:${version}
+docker build -t swach/busapp:${version} .
+docker push swach/busapp:${version}
