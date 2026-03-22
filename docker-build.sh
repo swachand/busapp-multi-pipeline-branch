@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=development
+version=develop
 
-sudo docker build -t learnitguide/busapp:${version} .
-sudo docker push learnitguide/busapp:${version}
+docker build -t swach/busapp:${version} .
+docker push swach/busapp:${version}

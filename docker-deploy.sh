@@ -1,10 +1,9 @@
 #!/bin/bash
 
-version=development
-env="development"
+version=develop
+env="develop"
 
-if sudo docker ps -a --format '{{.Names}}' | grep "${env}"
-then
-sudo docker stop ${env} && sudo docker rm ${env}
+if  docker ps -a --format '{{.Names}}' | grep "${env}"
+then docker stop ${env} &&  docker rm ${env}
 fi
-sudo docker run -it -d -p 8000:8001 --name ${env} learnitguide/busapp:${version}
+docker run -it -d -p 7000:7001 --name ${env} swach/busapp:${version}
