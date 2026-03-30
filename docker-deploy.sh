@@ -11,4 +11,4 @@ then
 fi
 
 # Run new container
-docker run -d -p 8000:8001 --name $env swach/busapp:$env
+docker run -d -p 8010:8001 --name $env swach/busapp:$env
