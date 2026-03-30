@@ -1,5 +1,3 @@
 #!/bin/bash
 
-version=staging
-
-docker build -t swach/busapp:${version} .
+docker build -t swach/busapp:$BRANCH_NAME .
