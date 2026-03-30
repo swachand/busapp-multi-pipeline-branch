@@ -1,9 +1,13 @@
 pipeline {
     agent any
+    environment {
+        IMAGE_TAG = "${BRANCH_NAME}"
+    }
     stages {
+
         stage('Docker Build') {
             steps {
-                sh 'sh docker-build.sh'
+                sh 'docker build -t swach/busapp:$IMAGE_TAG .'
             }
         }
 
@@ -19,7 +23,7 @@ pipeline {
 
         stage('Docker Push') {
             steps {
-                sh 'docker push swach/busapp:develop'
+                sh 'docker push swach/busapp:$IMAGE_TAG'
             }
         }
 
