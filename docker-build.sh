@@ -1,6 +1,3 @@
 #!/bin/bash
 
-version=production
-
-docker build -t swach/busapp:${version} .
-docker push swach/busapp:${version}
+docker build -t swach/busapp:$BRANCH_NAME .
